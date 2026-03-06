@@ -243,6 +243,7 @@ function Nav({ cur, setP }) {
           .hg{grid-template-columns:1fr!important;text-align:center!important;gap: 40px!important;padding-top:140px!important;}
           .hi{margin:0 auto!important;max-width:380px!important;order:-1!important; width: 90%!important;}
           .hbtns{justify-content:center!important}
+          .scroll-hint{display:none!important}
         }
         @media(min-width:901px){.mn{display:none!important}}
       `}</style>
@@ -354,7 +355,7 @@ function Hero({ setP }) {
       </div>
 
       {/* Scroll */}
-      <div style={{
+      <div className="scroll-hint" style={{
         position: "absolute", bottom: 32, left: "50%", transform: "translateX(-50%)",
         display: "flex", flexDirection: "column", alignItems: "center", gap: 7,
         animation: "float 2.5s ease-in-out infinite", zIndex: 3,
